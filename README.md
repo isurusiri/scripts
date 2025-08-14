@@ -35,6 +35,36 @@ python3 fetch_strava_activities.py
 - `strava_activities_last_2_years.csv` - Detailed activity data
 - `strava_summary_by_sport.csv` - Summary statistics by sport
 
+#### [Spotify Playlist Creator](./spotify/)
+A powerful tool to create Spotify playlists with specified songs. Supports both public and private playlists with configurable settings.
+
+**Features:**
+- OAuth authentication with Spotify API using OAuth 2.0
+- Flexible song input via command line, environment variables, or built-in defaults
+- Customizable playlist names, descriptions, and visibility
+- Smart track search with detailed results
+- Batch processing for efficient track addition
+- Environment configuration support with `.env` files
+- Verbose output for debugging and monitoring
+
+**Files:**
+- `create_playlist.py` - Main playlist creation script
+- `setup.sh` - Automated setup script
+- `requirements.txt` - Python dependencies
+- `README.md` - Detailed usage instructions
+- `env.example` - Example environment configuration
+
+**Usage:**
+```bash
+cd spotify/
+./setup.sh  # Automated setup
+python3 create_playlist.py
+```
+
+**Output:**
+- Created Spotify playlist in your account
+- OAuth token cache for future use
+
 ---
 
 ## Repository Structure
@@ -47,6 +77,12 @@ scripts/
 │   ├── fetch_strava_activities.py  # Main export script
 │   ├── requirements.txt         # Python dependencies
 │   └── README.md               # Detailed documentation
+├── spotify/                     # Spotify playlist creator
+│   ├── create_playlist.py      # Main playlist creation script
+│   ├── setup.sh                # Automated setup script
+│   ├── requirements.txt         # Python dependencies
+│   ├── README.md               # Detailed documentation
+│   └── env.example             # Example environment configuration
 └── .git/                       # Git repository
 ```
 
